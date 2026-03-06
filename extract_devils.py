@@ -18,7 +18,7 @@ def extract_devils(raw_path: Path) -> list[str]:
 
 
 def save_devils(devils: list[str], output_path: Path) -> None:
-    output_path.write_text(json.dumps(devils, ensure_ascii=False), encoding="utf-8")
+    output_path.write_text(json.dumps(devils, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
 
 def main() -> int:
